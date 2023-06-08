@@ -1,5 +1,5 @@
 ---
-apiVersion: policy/v1beta1
+apiVersion: policy/v1
 kind: PodSecurityPolicy
 metadata:
   name: restricted
@@ -15,7 +15,7 @@ metadata:
 spec:
   {{ podsecuritypolicy_restricted_spec | to_yaml(indent=2, width=1337) | indent(width=2) }}
 ---
-apiVersion: policy/v1beta1
+apiVersion: policy/v1
 kind: PodSecurityPolicy
 metadata:
   name: privileged
